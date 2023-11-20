@@ -57,21 +57,25 @@ body {
 .name {
     font-weight: 700;
     font-size: x-large;
-    padding-bottom: 10px;
+    padding-bottom: 2%;
+    text-align: start;
 }
 
 .infoSection .profileImage img {
     position: relative;
     width: fit-content; 
-    max-width: 200px; 
+    max-width: 195px;
     border-radius: 100%;
     z-index: 999;
     top: -60px;
 }
 
 div .followInfo {
+    gap: 30%;
     display: flex;
-    gap: 5%;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-items: center;
     flex-wrap: wrap; 
 }
 
@@ -134,12 +138,6 @@ div .tags {
     padding-bottom: 20px;
 }
 
-.postLine {
-    width: 100%;
-    position: relative;
-    left: 0;
-}
-
 .TiThumbsUp {
     border-radius: 30px;
     background-color: yellow;
@@ -151,58 +149,111 @@ div .tags {
     padding-bottom: 10px;
     font-weight: 200;
 }
-
+.postline{
+    position: relative;
+    width: 100vw;
+    left:-20px;
+    overflow-x: hidden;
+}
 .details p {
     padding-bottom: 10px;
 }
-
-span {
-    color: cyan;
+.line{
+    border-top: 1px solid #000;
+    width: 80%;
+    position: relative;
+    left: 150px;
 }
-@media (max-width: 768px) {
-    .infoSection,
-    .followInfo,
-    .icons,
-    .title,
-    .details,
-    .posts {
-        padding: 0 10px;
-    }
 
+@media (min-width:768px) and (max-width:1024px) {
+    .line {
+        border-top: 1px solid #000;
+        width: 80%;
+        position: relative;
+        left: 150px;
+      }
+}
+@media (max-width:768px) {
+    .profileImage img{
+        height: 90%;
+        width: 100%;
+    }
     div .followInfo {
-        gap: 5%; 
+        gap: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-items: center;
+        flex-wrap: wrap;
     }
-
+    .line {
+        border-top: 1px solid #000;
+        width: 78%;
+        position: relative;
+        left: 150px;
+      }
     div .FollowNumber {
         margin-top: 10px; 
     }
 }
-
-@media (max-width: 480px) {
+@media (min-width:425px) and (max-width : 675px){
     .infoSection,
     .followInfo,
-    .icons,
-    .title,
-    .details,
-    .posts {
+    .icons{
         flex-direction: row;
-        align-items: center;
+        align-items: baseline;
         padding: 0 5px;
         justify-content: center;
     }
-
+    .name{
+        text-align: center;
+    }
+    .line {
+        border-top: 1px solid #000;
+        width: 73%;
+        position: relative;
+        left: 150px;
+      }
     .title{
         justify-content: space-between;
     }
-
-    .infoSection .profileImage img {
-        /* margin-left: 50%; */
-      }
-
-    div .followInfo {
+    div .followInfo{
         gap: 5%;
         align-items: center;
-    justify-content: center;
+        justify-content: center;
+    }
+
+    .infos{
+        width: 100%;
+        text-align: center;
+        padding: 0%;
+    }
+}
+@media (max-width: 480px) {
+    .infoSection,
+    .followInfo,
+    .icons{
+        flex-direction: row;
+        align-items: baseline;
+        padding: 0 5px;
+        justify-content: center;
+    }
+    .name{
+        text-align: center;
+    }
+    .title{
+        justify-content: space-between;
+    }
+    .line {
+        border-top: 1px solid #000;
+        width: 55%;
+        position: relative;
+        left: 150px;
+      }
+    div .followInfo{
+        gap: 5%;
+        align-items: center;
+        justify-content: center;
     }
 
     .infos{
@@ -221,3 +272,22 @@ span {
   .infoSection .profileImage{
     width: fit-content;
   }
+ 
+@media (min-width: 425px) and (max-width:675px)
+{
+    .line {
+        border-top: 1px solid #000;
+        width: 64%;
+        position: relative;
+        left: 150px;
+      }
+}
+@media (max-width: 320px) and (max-width : 375px)
+{
+    .line {
+        border-top: 1px solid #000;
+        width: 53%;
+        position: relative;
+        left: 150px;
+      }
+}
